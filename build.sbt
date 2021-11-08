@@ -2,17 +2,16 @@ name := "zio"
 
 version := "0.1"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.12"
 
-lazy val akkaHttpVersion = "10.1.7"
+lazy val akkaVer = "2.6.17"
+lazy val akkaHttpVer = "10.2.7"
 
 libraryDependencies ++= Seq (
-  "dev.zio"                 %% "zio"                  % "1.0.0-RC18-2",
-  "com.typesafe"            % "config"                % "1.3.4",
+  "dev.zio"                 %% "zio"                  % "1.0.12",
+  "com.typesafe"            % "config"                % "1.4.1",
   "com.github.mauricio"     %% "mysql-async"          % "0.2.21",
-  "com.typesafe.akka"       %% "akka-http"            % "10.1.7",
-  "com.typesafe.akka"       %% "akka-stream"          % "2.5.19",
-  "com.typesafe.akka"       %% "akka-http-spray-json" % akkaHttpVersion
+  "com.typesafe.akka"       %% "akka-http"            % akkaHttpVer,
+  "com.typesafe.akka"       %% "akka-http-spray-json" % akkaHttpVer,
+  "com.typesafe.akka"       %% "akka-stream"          % akkaVer
 )
-
-
